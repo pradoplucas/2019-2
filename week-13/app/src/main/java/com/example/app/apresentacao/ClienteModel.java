@@ -1,24 +1,22 @@
-package com.example.app.persistencia;
+package com.example.app.apresentacao;
 
+import com.example.app.persistencia.Pais;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import java.io.Serializable;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
-public class Cliente implements Serializable {
+public class ClienteModel 
+{
+    
 
-    @Id @GeneratedValue
     private int id;
     private String nome;
     private int idade;
